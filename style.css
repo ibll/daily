@@ -1,0 +1,62 @@
+:root {
+    --background: rgb(239, 241, 245);
+    --text-color: rgb(76, 79, 105);
+    --rosewater: rgb(220, 138, 120);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: rgb(30, 30, 46);
+        --text-color: rgb(205, 214, 244);
+        --rosewater: rgb(245, 224, 220);
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    background-color: var(--background);
+    color: var(--text-color);
+
+    height: 100vh;
+    max-width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    background-image: url('data:image/svg+xml;utf8,');
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.background-date {
+    position: fixed;
+    bottom: 0;
+    left: -5%;
+    font-size: 20vw;
+    color: var(--text-color);
+    opacity: 0.1;
+    white-space: nowrap;
+    z-index: -2;
+
+    transform: translateY(32%);
+}
+
+svg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    fill: var(--rosewater) !important;
+}
+
+main {
+    text-align: center;
+    margin-bottom: 20vh;
+}
