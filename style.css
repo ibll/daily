@@ -16,6 +16,7 @@ body {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     background-color: var(--background);
+    white-space: pre-line;
     color: var(--text-color);
 
     height: 100vh;

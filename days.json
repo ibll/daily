@@ -48,5 +48,23 @@
 			"title": "56 years ago today...",
 			"description": "The Boeing 747 was unveiled!"
 		}
+	},
+	"10" : {
+		"1" : {
+			"title": "21 years ago today...",
+			"description": "4chan was launched!"
+		},
+		"2" : {
+			"title": "Happy Birthday Mahatma Gandhi!",
+			"description": "Gandhi was born on this day in 1869!"
+		},
+		"3" : {
+			"title": "Mean Girls Day\n(wear pink!)",
+			"description": "On October 3rd, he asked me what day it was!"
+		},
+		"4" : {
+			"title": "67 years ago today...",
+			"description": "Sputnik 1 was launched!"
+		}
 	}
 }
