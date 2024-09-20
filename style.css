@@ -30,6 +30,26 @@ body {
 
 main {
     margin-bottom: 20vh;
+
+    h1 {
+        font-size: 3rem;
+        margin: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        h1 {
+            font-size: 6rem;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+    }
 }
 
 #decorative-wave {
