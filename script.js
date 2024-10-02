@@ -14,16 +14,25 @@ function loadDay(m, d) {
 
 			if (data[m] && data[m][d]) {
 				const eventData = data[m][d];
-				document.getElementById('title').textContent = eventData.title;
-				document.getElementById('description').textContent = eventData.description;
+				document.getElementById('title').innerHTML = eventData.title;
+
+				const descriptionWithLinks = eventData.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+				document.getElementById('description').innerHTML = descriptionWithLinks;
+
+
+				const links = document.querySelectorAll('#description a');
+				links.forEach(link => {
+					link.setAttribute('target', '_blank');
+				});
+
 			} else {
-				document.getElementById('title').textContent = 'Erm...';
-				document.getElementById('description').textContent = 'I forgot to plan something for today. Sorry 😥';
+				document.getElementById('title').innerHTML = 'Erm...';
+				document.getElementById('description').innerHTML = 'I forgot to plan something for today. Sorry 😥';
 			}
 		})
 		.catch(error => {
 			console.error('Error fetching the JSON data:', error)
-			document.getElementById('title').textContent = 'Error';
-			document.getElementById('description').textContent = 'Whoops... something went wrong!';
+			document.getElementById('title').innerHTML = 'Error';
+			document.getElementById('description').innerHTML = 'Whoops... something went wrong!';
 		});
 }

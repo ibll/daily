@@ -2,13 +2,15 @@
     --background: rgb(239, 241, 245);
     --text-color: rgb(76, 79, 105);
     --rosewater: rgb(220, 138, 120);
+    --rosewater-trans: rgba(220, 138, 120, 127);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background: rgb(30, 30, 46);
         --text-color: rgb(205, 214, 244);
-        --rosewater: rgb(245, 224, 220);
+        --rosewater: rgba(245, 224, 220);
+        --rosewater-trans: rgba(245, 224, 220, 127);
     }
 }
 
@@ -40,6 +42,15 @@ main {
     p {
         font-size: 1rem;
         margin: 1rem;
+    }
+
+    a {
+        color: var(--rosewater);
+        text-decoration: none;
+
+&:hover {
+            text-decoration: underline;
+        }
     }
 
     @media (min-width: 768px) {

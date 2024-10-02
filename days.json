@@ -63,8 +63,40 @@
 			"description": "On October 3rd, he asked me what day it was!"
 		},
 		"4" : {
-			"title": "67 years ago today...",
-			"description": "Sputnik 1 was launched!"
+			"title": "World Space Week!",
+			"description": "67 years ago today, Sputnik 1 was launched!"
+		},
+		"5": {
+			"title": "30 years ago today...!",
+			"description": "The bodies of 48 members of The Order of the Solar Temple were found after a cult mass-murder suicide."
+		},
+		"6": {
+			"title": "World Space Week!",
+			"description": "34 years ago today, Space Shuttle Discovery launched the Ulysses probe to chart the Sun!"
+		},
+		"7": {
+			"title": "World Space Week!",
+			"description": "65 years ago today, [Luna 3](https://en.wikipedia.org/wiki/Luna_3) transmitted the first photos of the far side of the moon!"
+		},
+		"8": {
+			"title": "Happy International Lesbian Day!",
+			"description": "❤️🧡🤍🩷💜"
+		},
+		"9": {
+			"title": "World Space Week!",
+			"description": "15 years ago today, NASA's [Lunar Precursor Robotic Program](https://en.wikipedia.org/wiki/Lunar_Precursor_Robotic_Program) impacted the moon to record data for future crewed missions!"
+		},
+		"10": {
+			"title": "Last day of Space Week :(",
+			"description": "57 years ago today, the [Outer Space Treaty](https://en.wikipedia.org/wiki/Outer_Space_Treaty) was established!"
+		},
+		"11": {
+			"title": "Space Week is Forever!",
+			"description": "66 years ago today, NASA launched its first space probe, [Pioneer1](https://en.wikipedia.org/wiki/Pioneer_1)!\n\n56 years ago today, [Apollo 7](https://en.wikipedia.org/wiki/Apollo_7) was launched!\n\n50 years ago today, [Kathryn D. Sullivan](https://en.wikipedia.org/wiki/Kathryn_D._Sullivan) became the first American woman to perform a space walk!\n\n24 years ago today, the [100th Space Shuttle mission](https://en.wikipedia.org/wiki/STS-92) was launched!"
+		},
+		"12": {
+			"title": "123 years ago today...",
+			"description": "Theodore Roosevelt [officially renamed](https://en.wikipedia.org/wiki/White_House#Naming_conventions) the Executive Mansion to the White House!"
 		}
 	}
 }
