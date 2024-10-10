@@ -1,19 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const today = new Date();
+	const year = today.getFullYear();
 	const month = today.getMonth() + 1; // getMonth() returns 0-11
 	const day = today.getDate();
 
-	loadDay(month, day);
+	loadDay(year, month, day);
 });
 
-function loadDay(m, d) {
+function loadDay(y, m, d) {
 	fetch('days.json')
 		.then(response => response.json())
 		.then(data => {
 			document.getElementById('bg-date').textContent = `${m}/${d}`;
 
-			if (data[m] && data[m][d]) {
-				const eventData = data[m][d];
+			if (data[y]?.[m]?.[d] !== undefined) {
+				const eventData = data[y][m][d];
 				document.getElementById('title').innerHTML = eventData.title;
 
 				const descriptionWithLinks = eventData.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
