@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const day = today.getDate();
 
 	loadDay(month, day);
+	createScrollIndicator();
+	handleScroll();
 });
 
 function loadDay(m, d) {
@@ -35,4 +37,27 @@ function loadDay(m, d) {
 			document.getElementById('title').innerHTML = 'Error';
 			document.getElementById('description').innerHTML = 'Whoops... something went wrong!';
 		});
+}
+
+function createScrollIndicator() {
+	let indicator = document.createElement('div');
+	indicator.id = 'scroll-indicator';
+	document.body.appendChild(indicator);
+
+	indicator.onclick = () => {
+		document.getElementById('below-fold').scrollIntoView({ behavior: 'smooth'});
+	}
+}
+
+function handleScroll() {
+	const indicator = document.getElementById('scroll-indicator');
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 0) {
+			indicator.style.opacity = '0';
+			indicator.style.pointerEvents = 'none';
+		} else {
+			indicator.style.opacity = '1';
+			indicator.style.pointerEvents = 'auto';
+		}
+	});
 }
