@@ -42,6 +42,7 @@ function loadDay(m, d) {
 function createScrollIndicator() {
 	let indicator = document.createElement('div');
 	indicator.id = 'scroll-indicator';
+	indicator.innerHTML = '<span>Blog</span>';
 	document.body.appendChild(indicator);
 
 	indicator.onclick = () => {

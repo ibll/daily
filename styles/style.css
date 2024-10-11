@@ -1,22 +1,45 @@
 :root {
     --background: rgb(239, 241, 245);
+    --background-trans: rgba(239, 241, 245, 0.5);
     --text-color: rgb(76, 79, 105);
     --text-color-trans: rgba(76, 79, 105, 0.5);
     --rosewater: rgb(220, 138, 120);
     --rosewater-trans: rgba(220, 138, 120, 0.5);
+    --surface: rgb(188, 192, 204);
+
+    --shadow: rgba(0, 0, 0, 0.25);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background: rgb(30, 30, 46);
+        --background-trans: rgb(30, 30, 46, 0.5);
         --text-color: rgb(205, 214, 244);
         --text-color-trans: rgba(205, 214, 244, 0.5);
         --rosewater: rgb(245, 224, 220);
         --rosewater-trans: rgba(245, 224, 220, 0.5);
+        --surface: rgb(69, 71, 90);
     }
+
+    --shadow: rgb(0, 0, 0, 0.25);
+}
+
+html::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--background);
+}
+
+html::-webkit-scrollbar-thumb {
+    max-width: 0.8em;
+    background: var(--surface);
+    border-radius: 1em;
 }
 
 body {
+
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     background-color: var(--background);
@@ -84,7 +107,7 @@ a[target="_blank"]::after {
     display: inline-block;
 
     mask-size: cover;
-    mask-image: url(assets/external.svg);
+    mask-image: url(../assets/external.svg);
     background-color: var(--rosewater-trans);
 }
 
@@ -114,12 +137,19 @@ a[target="_blank"]::after {
 }
 
 #scroll-indicator {
-    width: 3em;
+    span {
+        padding: 0.5em 0.25em 0.5em 0.5em;
+        font-size: 1em;
+        font-weight: bolder;
+    }
+
+    width: auto;
     height: 3em;
-    border-radius: 100%;
+    padding: 0 0.5em;
+    border-radius: 1em;
     aspect-ratio: 1;
 
-    position: fixed;
+    position: absolute;
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
@@ -130,10 +160,10 @@ a[target="_blank"]::after {
     justify-content: center;
 
     background-color: var(--background);
-    color: var(--rosewater);
-    box-shadow: var(--text-color-trans) 0 0 0.5em 0.1em;
+    color: var(--text-color);
+    box-shadow: var(--shadow) 0 0 0.5em 0.1em;
+    outline: var(--rosewater-trans) 0.2em solid;
 
-    animation: bounce 1s infinite;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -142,31 +172,17 @@ a[target="_blank"]::after {
 
     width: 1.5em;
     height: 1.5em;
-    margin-left: 0.3rem;
-    margin-right: 0.3rem;
     display: inline-block;
 
     mask-size: cover;
-    mask-image: url(assets/scroll.svg);
+    mask-image: url(../assets/scroll.svg);
     background-color: var(--text-color);
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translate(-50%, 0);
-    }
-    40% {
-        transform: translate(-50%, -0.5em);
-    }
-    60% {
-        transform: translate(-50%, -0.25em);
-    }
 }
 
 .below-fold {
     margin-top: -1px;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 
     background-color: var(--rosewater);
     color: var(--background);
