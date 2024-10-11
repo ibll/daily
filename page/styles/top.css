@@ -65,6 +65,15 @@ a[target="_blank"]::after {
     fill: var(--rosewater) !important;
     margin: 0;
     padding: 0;
+    transition: fill 0.5s ease-in-out;
+    /*will-change: fill;*/
+}
+
+@media (prefers-color-scheme: dark) {
+    .inverted #decorative-wave {
+        fill: var(--background) !important;
+        filter: drop-shadow(0 0 2em var(--shadow));
+    }
 }
 
 #bg-date {
