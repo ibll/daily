@@ -40,7 +40,9 @@ function loadDay(m, d) {
 }
 
 function createScrollIndicator() {
-	let indicator = document.createElement('div');
+	if (document.getElementById('below-fold') === null) return;
+
+	let indicator = document.createElement('button');
 	indicator.id = 'scroll-indicator';
 	indicator.innerHTML = '<span>Blog</span>';
 	document.body.appendChild(indicator);
