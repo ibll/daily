@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	loadDay(year, month, day);
 	createScrollIndicator();
 	handleScroll();
+	loadPosts();
 });
 
 function loadDay(y, m, d) {
@@ -27,7 +28,6 @@ function loadDay(y, m, d) {
 				links.forEach(link => {
 					link.setAttribute('target', '_blank');
 				});
-
 			} else {
 				document.getElementById('title').innerHTML = 'Erm...';
 				document.getElementById('description').innerHTML = 'I forgot to plan something for today. Sorry 😥';
@@ -64,4 +64,25 @@ function handleScroll() {
 			indicator.style.pointerEvents = 'auto';
 		}
 	});
+}
+
+function loadPosts() {
+	fetch('generated_html')
+		.then(response => response.json())
+		.then(files => {
+			const postsContainer = document.getElementById('posts-container');
+			files.slice(0, 3).forEach(file => {
+				fetch(`generated_html/${file}`)
+					.then(response => response.text())
+					.then(html => {
+						const postElement = document.createElement('div');
+						postElement.classList.add('post');
+						postElement.innerHTML = html;
+						postsContainer.appendChild(postElement);
+					});
+			});
+		})
+		.catch(error => {
+			console.error('Error fetching the posts:', error);
+		});
 }
