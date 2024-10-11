@@ -34,7 +34,7 @@ postsAPI.generateRSS = function() {
 				feed.item({
 					title: data.title,
 					description: postContent,
-					url: `https://ibll.dev/posts/${file.replace('.md', '')}`,
+					url: `https://ibll.dev/daily/posts/${file.replace('.md', '')}`,
 					date: data.date,
 				});
 			}
