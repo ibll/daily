@@ -1,0 +1,55 @@
+:root {
+    --background: rgb(239, 241, 245);
+    --background-trans: rgba(239, 241, 245, 0.5);
+    --text-color: rgb(76, 79, 105);
+    --text-color-trans: rgba(76, 79, 105, 0.5);
+    --rosewater: rgb(220, 138, 120);
+    --rosewater-trans: rgba(220, 138, 120, 0.5);
+    --surface: rgb(188, 192, 204);
+    --surface-trans: rgba(188, 192, 204, 0.5);
+    --shadow: rgba(0, 0, 0, 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: rgb(30, 30, 46);
+        --background-trans: rgb(30, 30, 46, 0.5);
+        --text-color: rgb(205, 214, 244);
+        --text-color-trans: rgba(205, 214, 244, 0.5);
+        --rosewater: rgb(245, 224, 220);
+        --rosewater-trans: rgba(245, 224, 220, 0.5);
+        --surface: rgb(69, 71, 90);
+        --surface-trans: rgba(69, 71, 90, 0.5);
+    }
+    --shadow: rgb(0, 0, 0, 0.25);
+}
+
+html::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--background);
+}
+
+html::-webkit-scrollbar-thumb {
+    max-width: 0.8em;
+    background: var(--surface);
+    border-radius: 1em;
+}
+
+body {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background);
+    white-space: pre-line;
+    color: var(--text-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    align-content: flex-start;
+    margin: 0;
+}

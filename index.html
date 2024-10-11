@@ -4,24 +4,33 @@
 	<meta charset="UTF-8">
 	<title>On This Day...</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/top.css">
+	<link rel="stylesheet" href="styles/bottom.css">
+	<link rel="stylesheet" href="styles/indicator.css">
 	<script src="script.js"></script>
 </head>
 <body>
 
-	<main>
-		<h1 id="title"></h1>
-		<br>
-		<p id="description"></p>
-	</main>
+	<section class="above-fold">
+		<div class="fold-content">
+			<h1 id="title"></h1>
+			<br>
+			<p id="description"></p>
+		</div>
 
-	<div id="background-date-container">
-		<h1 id="bg-date"></h1>
-	</div>
+		<div id="background-date-container">
+			<h1 id="bg-date"></h1>
+		</div>
 
-	<svg id="decorative-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-		<path d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,245.3C672,245,768,203,864,186.7C960,171,1056,181,1152,186.7C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-	</svg>
-
+		<svg id="decorative-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,245.3C672,245,768,203,864,186.7C960,171,1056,181,1152,186.7C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+		</svg>
+	</section>
+<!--	<section id="below-fold" class="below-fold">-->
+<!--		<main>-->
+<!--			<p>Other content!</p>-->
+<!--		</main>-->
+<!--	</section>-->
 </body>
 </html>
