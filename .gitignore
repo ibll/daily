@@ -1,4 +1,5 @@
 .DS_Store
-/generated_html/
+generated_html/
 /package-lock.json
 /node_modules/
+/posts/.obsidian/

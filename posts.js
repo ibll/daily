@@ -56,7 +56,8 @@ function generatePostAndAddToFeeds(file, generatedHtmlDir) {
 
 	// Create HTML File
 	fs.mkdirSync(dest_path, { recursive: true });
-	exec(`npx pandoc ${file_path} -o ${dest_path_file}`, (err, stdout, stderr) => {
+	const command = `npx pandoc --css=../../styles/style.css --css=../../styles/posts.css -V lang=en -V highlighting-css= --mathjax \ --smart --to=html5 ${file_path} -o ${dest_path_file}`;
+	exec(command, (err, stdout, stderr) => {
 		if (err) throw err;
 		if (stderr) console.error(stderr);
 	});
