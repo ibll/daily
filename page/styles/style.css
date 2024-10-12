@@ -33,7 +33,7 @@
 }
 
 html::-webkit-scrollbar {
-    width: 0.5em;
+    width: 0.5rem;
 }
 
 html::-webkit-scrollbar-track {
@@ -41,24 +41,24 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-    max-width: 0.8em;
+    max-width: 0.8rem;
     background: var(--surface);
-    border-radius: 1em;
+    border-radius: 1rem;
 }
 
 body {
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    background-color: var(--background);
-    white-space: pre-line;
-    color: var(--text-color);
-    text-wrap: balance;
+    margin: 0;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-
+    align-items: center;
     align-content: flex-start;
-    margin: 0;
+    justify-content: center;
+
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    white-space: pre-line;
+    text-wrap: balance;
+    background-color: var(--background);
+    color: var(--text-color);
 }

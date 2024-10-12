@@ -1,0 +1,144 @@
+.above-fold {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    min-height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#day-info h1 {
+    margin: 1.5rem;
+    font-size: 3rem;
+}
+
+#day-info p {
+    margin: 1rem 1rem 10%;
+    font-size: 1rem;
+}
+
+#day-info a {
+    color: var(--rosewater);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (min-width: 768px) {
+    #day-info h1 {
+        font-size: 6rem;
+    }
+
+    #day-info p {
+        font-size: 2rem;
+    }
+}
+
+a[target="_blank"]::after {
+    content: "";
+
+    width: 0.75em;
+    height: 0.75em;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    display: inline-flex;
+
+    mask-size: cover;
+    mask-image: url(../assets/external.svg);
+    background-color: var(--rosewater-trans);
+}
+
+#decorative-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+
+    fill: var(--rosewater) !important;
+    transition: fill 0.5s ease-in-out;
+    /*will-change: fill;*/
+}
+
+@media (prefers-color-scheme: dark) {
+    .inverted #decorative-wave {
+        fill: var(--background) !important;
+        filter: drop-shadow(0 0 2em var(--shadow));
+    }
+}
+
+#bg-date {
+    position: absolute;
+    bottom: 0;
+    left: -5%;
+    z-index: -2;
+    transform: translateY(85%);
+
+    font-size: 30vw;
+    white-space: nowrap;
+    color: var(--text-color);
+    opacity: 0.1;
+}
+
+#scroll-indicator {
+    all: unset;
+
+    position: absolute;
+    width: auto;
+    height: 3em;
+    padding: 0 0.5em;
+    border-radius: 1em;
+    aspect-ratio: 1;
+    bottom: 30vw;
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--background);
+    color: var(--text-color);
+    box-shadow: var(--shadow) 0 0 0.5em 0.1em;
+    outline: var(--surface-trans) 0.2em solid;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#scroll-indicator span {
+    padding: 0.5em 0.25em 0.5em 0.5em;
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+@media (min-width: 768px) {
+    #scroll-indicator {
+        bottom: 5%;
+    }
+}
+
+@media (max-height: 768px) {
+    #scroll-indicator {
+        display: none;
+    }
+}
+
+#scroll-indicator::after {
+    content: "";
+
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+
+    mask-size: cover;
+    mask-image: url(../assets/arrow.svg);
+    background-color: var(--text-color);
+}

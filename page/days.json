@@ -116,8 +116,7 @@
 				"description": "The [Cuban Missile Crisis](https://en.wikipedia.org/wiki/Cuban_Missile_Crisis) began."
 			},
 			"17": {
-				"title": "Happy International Pronouns Day!",
-				"description": "https://pronouns.org/day/"
+				"title": "Happy International Pronouns Day!"
 			},
 			"18": {
 				"title": "61 years ago today...",
@@ -132,12 +131,20 @@
 				"description": "[The lettuce](https://www.nytimes.com/2022/10/19/world/europe/liz-truss-lettuce-stream.html) outlasted Liz Truss!"
 			},
 			"21": {
-				"title": "41 years ago today...!",
+				"title": "41 years ago today...",
 				"description": "The [metre was redefined](https://en.wikipedia.org/wiki/Metre#Speed_of_light_definition) as the distance light travels in a vacuum in 1/299,792,458 seconds."
 			},
 			"22": {
-				"title": "145 years ago today...!",
+				"title": "145 years ago today...",
 				"description": "Edison tested the first practical [incandescent bulb](https://en.wikipedia.org/wiki/Incandescent_light_bulb), which lasted thirteen and a half hours!"
+			}
+		}
+	},
+	"2025": {
+		"6": {
+			"4": {
+				"title": "215 years ago today...",
+				"description": "[The Society in Dedham for Apprehending Horse Thieves](https://en.wikipedia.org/wiki/The_Society_in_Dedham_for_Apprehending_Horse_Thieves) met for the first time!"
 			}
 		}
 	}

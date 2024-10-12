@@ -1,4 +1,6 @@
-import {generateDivFromPost, getPostsData} from './posts.js';
+import {generateButtonFromPost, getPostsData, addFunButton } from './posts.js';
+
+const POSTS_SHOWN = 3;
 
 document.addEventListener('DOMContentLoaded', async () => {
 	const today = new Date();
@@ -19,26 +21,40 @@ function loadDay(y, m, d) {
 
 			if (data[y]?.[m]?.[d] !== undefined) {
 				const eventData = data[y][m][d];
-				document.getElementById('title').innerHTML = eventData.title;
-
-				const descriptionWithLinks = eventData.description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
-				document.getElementById('description').innerHTML = descriptionWithLinks;
-
-
-				const links = document.querySelectorAll('#description a');
-				links.forEach(link => {
-					link.setAttribute('target', '_blank');
-				});
+				setDayContent(eventData.title, eventData.description)
 			} else {
-				document.getElementById('title').innerHTML = 'Erm...';
-				document.getElementById('description').innerHTML = 'I forgot to plan something for today. Sorry 😥';
+				setDayContent('Erm...', 'I forgot to plan something for today. Sorry 😥');
 			}
 		})
 		.catch(error => {
 			console.error('Error fetching the JSON data:', error)
-			document.getElementById('title').innerHTML = 'Error';
-			document.getElementById('description').innerHTML = 'Whoops... something went wrong!';
+			setDayContent('Error', 'Whoops... something went wrong!');
 		});
+}
+window.loadDay = loadDay;
+
+function setDayContent(title, description) {
+	const day_info = document.getElementById('day-info');
+	day_info.innerHTML = '';
+
+	if (title) {
+		const title_element = document.createElement('h1');
+		title_element.id = 'title';
+		title_element.textContent = title;
+		day_info.appendChild(title_element)
+	}
+
+	if (description) {
+		const description_element = document.createElement('p');
+		description_element.id = 'description';
+		description_element.innerHTML = description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+		day_info.appendChild(description_element);
+
+		const links = document.querySelectorAll('#description a');
+		links.forEach(link => {
+			link.setAttribute('target', '_blank');
+		});
+	}
 }
 
 async function generateBelowFoldContent() {
@@ -67,7 +83,11 @@ async function generateBelowFoldContent() {
 	below_fold.appendChild(posts_container)
 
 	console.log(posts_data);
-	posts_data.slice(0, 5).forEach(post => generateDivFromPost(post, posts_container, './'));
+	posts_data.slice(0, POSTS_SHOWN).forEach(post => generateButtonFromPost(post, posts_container, './'));
+
+	if (posts_data.length > POSTS_SHOWN) {
+		addFunButton(posts_container, 'View All', 'posts', null, 'see-all');
+	}
 }
 
 function createScrollIndicator() {
