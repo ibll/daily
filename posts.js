@@ -26,7 +26,7 @@ postsAPI.generatePostsAndFeeds = function(generatedHtmlDir) {
 
 	// Read all Markdown files in the posts directory
 	if (fs.existsSync(POSTS_DIR)) {
-		fs.mkdirSync(path.join(generatedHtmlDir, 'posts'));
+		// fs.mkdirSync(path.join(generatedHtmlDir, 'posts'));
 		const files = fs.readdirSync(POSTS_DIR)
 		files.forEach(file => {
 			if (file.startsWith('.')) return;

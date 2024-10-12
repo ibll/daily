@@ -16,8 +16,60 @@
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
+.squiggly-header {
+    &.left {
+        width: 40rem;
+        max-width: 90%;
+    }
+        margin-bottom: 0.4em;
+
+    font-size: 4em;
+    font-weight: bolder;
+    text-align: left;
+
+    transition: top 1s ease-in-out;
+
+    @media (min-width: 768px) {
+        & {
+            font-size: 6em;
+        }
+    }
+}
+
+.squiggly-header a {
+    text-decoration: none;
+    padding: 0.1em;
+    border-radius: 0.1em;
+
+    &:visited {
+        color: inherit;
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+
+        width: 3.3em;
+        height: 1.1em;
+        transform: translate(-0.2em, -0.6em);
+        transition: background-color 0.5s ease-in-out;
+
+        display: block;
+        mask-size: cover;
+        mask-image: url(../assets/underline.svg);
+        background-color: var(--background-trans);
+    }
+
+    .link > &:hover {
+        &:after {
+            background-color: var(--background);
+            transform: rotate(180deg) translate(0.1em, 0.55em);
+        }
+    }
+}
+
 #posts-container {
-    width: 40em;
+    width: 40rem;
     max-width: 90%;
     padding: 1rem;
 
@@ -25,24 +77,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    & > h1 {
-        font-weight: bolder;
-        font-size: 3em;
-        margin: 0.5rem;
-        width: 100%;
-        text-align: left;
-    }
-
-    @media (min-width: 768px) {
-        & > h1 {
-            font-size: 6em;
-            margin: 2rem;
-        }
-    }
 }
 
 .post {
+    padding: 0;
+    width: 100%;
+    border: none;
+    margin: 1em;
+}
+
+.post > div {
     position: relative;
     display: flex;
     justify-content: center;
@@ -51,7 +95,6 @@
     height: 8em;
     border-radius: 1em;
 
-    margin: 2em;
     overflow: hidden;
     width: 100%;
 
@@ -62,29 +105,29 @@
     box-shadow: var(--shadow) 0.5em 0.5em 0.5em 0.25em;
 
     transition: outline 0.5s ease-in-out;
-
-    h1 {
-        color: var(--text-color);
-        position: absolute;
-        z-index: 2;
-    }
-
-    .post-date {
-        color: var(--text-color-trans);
-        opacity: 0.25;
-        font-size: 8rem;
-        z-index: 1;
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        transform: translate(-7.5%, 2.25rem);
-    }
 }
 
-.post:hover {
+.post:hover > div {
     transform: translate(0.5em, 0.5em);
     box-shadow: inset var(--shadow) 0.5em 0.5em 0.5em 0.25em;
+}
+
+.post > div h1 {
+    color: var(--text-color);
+    position: absolute;
+    z-index: 2;
+}
+
+.post > div .post-date {
+    color: var(--text-color-trans);
+    opacity: 0.25;
+    font-size: 8rem;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: translate(-7.5%, 2.25rem);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -93,7 +136,19 @@
         color: var(--text-color);
     }
 
-    .inverted .post {
+    .inverted .post > div {
         outline: var(--rosewater-trans) solid 0.2em;
+    }
+
+    .inverted  .squiggly-header {
+        a:after {
+            background-color: var(--text-color-trans);
+        }
+
+        &:hover {
+            a:after {
+                background-color: var(--text-color);
+            }
+        }
     }
 }

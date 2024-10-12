@@ -51,6 +51,6 @@
     display: inline-block;
 
     mask-size: cover;
-    mask-image: url(../assets/scroll.svg);
+    mask-image: url(../assets/arrow.svg);
     background-color: var(--text-color);
 }

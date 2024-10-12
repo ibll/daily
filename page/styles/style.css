@@ -52,6 +52,7 @@ body {
     background-color: var(--background);
     white-space: pre-line;
     color: var(--text-color);
+    text-wrap: balance;
 
     display: flex;
     align-items: center;
