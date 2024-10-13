@@ -40,7 +40,7 @@ function setDayContent(title, description) {
 	if (title) {
 		const title_element = document.createElement('h1');
 		title_element.id = 'title';
-		title_element.textContent = title;
+		title_element.innerHTML = title.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
 		day_info.appendChild(title_element)
 	}
 
