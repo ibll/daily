@@ -76,6 +76,7 @@ async function generateBelowFoldContent() {
 	const heading_link = document.createElement('a');
 	heading_link.href = './posts';
 	heading_link.textContent = 'Posts';
+	heading_link.id = 'posts-header';
 	header.appendChild(heading_link);
 
 	const posts_container = document.createElement('div');
@@ -103,26 +104,20 @@ function createScrollIndicator() {
 
 function scrollListener() {
 	const indicator = document.getElementById('scroll-indicator');
-	const below_fold = document.getElementById('below-fold');
+	const posts_header = document.getElementById('posts-header');
 
 	window.addEventListener('scroll', () => {
-		if (indicator) {
-			if (window.scrollY > 0) {
-				indicator.style.opacity = '0';
-				indicator.style.pointerEvents = 'none';
-			} else {
-				indicator.style.opacity = '1';
-				indicator.style.pointerEvents = 'auto';
-			}
-		}
+		const tolerance = 10;
 
-		if (below_fold) {
-			const viewport_offset = below_fold.getBoundingClientRect();
+		if (posts_header && indicator) {
+			const viewport_offset = posts_header.getBoundingClientRect();
 			const viewport_height = window.innerHeight;
-			if (viewport_offset.top < viewport_height - 10) {
+			if (viewport_offset.top < viewport_height - tolerance) {
 				document.body.classList.add('inverted');
+				indicator.style.opacity = '0';
 			} else {
 				document.body.classList.remove('inverted');
+				indicator.style.opacity = '1';
 			}
 		}
 	});

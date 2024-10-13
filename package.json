@@ -9,7 +9,6 @@
 	},
 	"dependencies": {
 		"gray-matter": "^4.0.3",
-		"pandoc-bin": "^0.2.0",
 		"rss": "^1.2.2"
 	}
 }

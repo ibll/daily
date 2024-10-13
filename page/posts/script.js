@@ -5,3 +5,4 @@ document.addEventListener('DOMContentLoaded', async () => {
 	const posts_data = await getPostsData('../posts.json');
 	posts_data.forEach(post => generateButtonFromPost(post, posts_container, '../'));
 });
+
