@@ -6,7 +6,7 @@ import {exec} from "child_process";
 
 const __dirname = import.meta.dirname;
 
-const POSTS_DIR = path.join(__dirname, 'posts');
+const POSTS_DIR = 'posts'
 const RSS_PATH = path.join(__dirname, 'generated_html', 'rss.xml');
 
 const postsAPI = {};

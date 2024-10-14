@@ -1,7 +1,6 @@
 body {
     margin: 0 auto 25vh;
     text-wrap: wrap;
-
     font-weight: normal;
 }
 
@@ -57,8 +56,19 @@ article {
     max-width: 50rem;
 }
 
+article > * {
+    width: 90%;
+    max-width: 90%;
+    height: auto;
+}
+
+article img {
+    width: 100%;
+}
+
 article h1 {
-    /*width: 90%;*/
+    max-width: 100%;
+    width: 100%;
     margin: 0;
     padding: 0.5em 0;
     text-align: left;
@@ -70,6 +80,12 @@ article p {
     text-align: left;
     line-height: 2;
     width: 95%;
+}
+
+mjx-container {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 article a {
