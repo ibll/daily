@@ -128,7 +128,7 @@ a[target="_blank"]::after {
     }
 }
 
-@media (min-width: 768px) and (max-height: 40rem) {
+@media (max-height: 30rem) {
     #scroll-indicator {
         display: none;
     }

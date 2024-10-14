@@ -48,6 +48,7 @@ function readDirRecursive(generatedHtmlDir, dir) {
 	const files = fs.readdirSync(dir);
 
 	files.forEach(file => {
+		if (file.startsWith('.')) return;
 		const fullPath = path.join(dir, file);
 		const stat = fs.statSync(fullPath);
 		if (stat.isDirectory()) {
