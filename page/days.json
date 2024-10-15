@@ -205,19 +205,69 @@
 			"8": {
 				"title": "129 years ago today...",
 				"description": "[Wilhelm Röntgen](https://en.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen) discovers X-Rays!"
+			},
+			"9": {
+				"title": "20 years ago today...",
+				"description": "[Firefox 1.0](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/releases/1.0) was released!"
+			},
+			"10": {
+				"title": "55 years ago today...",
+				"description": "[Sesame Street](https://en.wikipedia.org/wiki/Sesame_Street) debuted!"
+			},
+			"11": {
+				"title": "106 years ago today...",
+				"description": "[World War I ended](https://en.wikipedia.org/wiki/Armistice_of_11_November_1918)."
+			},
+			"12": {
+				"title": "44 years ago today...",
+				"description": "Voyager 1 takes its first [images of Saturn](https://en.wikipedia.org/wiki/Voyager_1#Flyby_of_Saturn)!"
+			},
+			"13": {
+				"title": "11 years ago today...",
+				"description": "Hawaii legalised [same-sex marriage](https://en.wikipedia.org/wiki/Hawaii_Marriage_Equality_Act)!"
+			},
+			"14": {
+				"title": "55 years ago today...",
+				"description": "[Apollo 12](https://en.wikipedia.org/wiki/Apollo_12) was launched!"
+			},
+			"15": {
+				"title": "23 years ago today...",
+				"description": "The [Xbox](https://en.wikipedia.org/wiki/Xbox_(console)) was released!"
+			},
+			"16": {
+				"title": "20 years ago today...",
+				"description": "[Half-Life 2](https://en.wikipedia.org/wiki/Half-Life_2) was released!"
+			}
+		},
+		"12": {
+			"6": {
+				"title": "107 years ago today...",
+				"description": "The [Halifax Explosion](https://en.wikipedia.org/wiki/Halifax_Explosion), the largest non-nuclear explosion in history, killed 1,800."
 			}
 		}
 	},
 	"2025": {
+		"1": {
+			"28": {
+				"title": "[Lost Trawlermen's Day](https://www.hullfishingheritage.org.uk/lost-trawlermens-day/)"
+			}
+		},
+		"2": {
+			"24": {
+				"title": "2 years ago today...",
+				"description": "A Canadian judge [ruled](https://citoyens.soquij.qc.ca/php/decision.php?ID=B40649560046AC98B6BC3AA9D9C409F7) that raising the middle finger is a  'God-given, Charter enshrined right that belongs to every red-blooded Canadian'."
+			}
+		},
+		"3": {
+			"3": {
+				"title": "149 years ago today...",
+				"description": "The [Kentucky meat shower](https://en.m.wikipedia.org/wiki/Kentucky_meat_shower) occurred!"
+			}
+		},
 		"6": {
 			"4": {
 				"title": "215 years ago today...",
 				"description": "[The Society in Dedham for Apprehending Horse Thieves](https://en.wikipedia.org/wiki/The_Society_in_Dedham_for_Apprehending_Horse_Thieves) met for the first time!"
-			}
-		},
-		"7": {
-			"12": {
-				"title": ""
 			}
 		}
 	}

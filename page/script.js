@@ -40,14 +40,14 @@ function setDayContent(title, description) {
 	if (title) {
 		const title_element = document.createElement('h1');
 		title_element.id = 'title';
-		title_element.innerHTML = title.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+		title_element.innerHTML = convertLinksFromMD(title);
 		day_info.appendChild(title_element)
 	}
 
 	if (description) {
 		const description_element = document.createElement('p');
 		description_element.id = 'description';
-		description_element.innerHTML = description.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+		description_element.innerHTML = convertLinksFromMD(description)
 		day_info.appendChild(description_element);
 
 		const links = document.querySelectorAll('#description a');
@@ -55,6 +55,11 @@ function setDayContent(title, description) {
 			link.setAttribute('target', '_blank');
 		});
 	}
+}
+
+function convertLinksFromMD(content) {
+	// noinspection HtmlUnknownTarget
+	return content.replace(/\[([^\]]+)]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
 }
 
 async function generateBelowFoldContent() {
@@ -83,7 +88,6 @@ async function generateBelowFoldContent() {
 	posts_container.id = 'posts-container';
 	below_fold.appendChild(posts_container)
 
-	console.log(posts_data);
 	posts_data.slice(0, POSTS_SHOWN).forEach(post => generateButtonFromPost(post, posts_container, './'));
 
 	if (posts_data.length > POSTS_SHOWN) {
