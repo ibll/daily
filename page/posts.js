@@ -15,7 +15,7 @@ export function generateButtonFromPost(post, parent, base_URL) {
 	let background_text;
 	if (post.date) {
 		const date = new Date(post.date);
-		background_text = date.getMonth() + 1 + '/' + date.getDate();
+		background_text = (date.getMonth()+1) + '/' + (date.getDate()+1);
 	}
 	const url = base_URL + post.url
 	addFunButton(parent, title, url, background_text)

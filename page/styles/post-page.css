@@ -54,6 +54,8 @@ header:after {
 article {
     width: 85%;
     max-width: 50rem;
+    padding-bottom: 5vh;
+    border-bottom: var(--surface) solid 0.1em;
 }
 
 article > * {
@@ -89,6 +91,7 @@ mjx-container {
 }
 
 article a {
+
     color: var(--rosewater);
 }
 
@@ -110,6 +113,21 @@ article a.link-icon::after {
 article a.link-icon[target="_blank"]::after {
     transform: rotate(0deg);
     mask-image: url(../assets/external.svg);
+}
+
+article blockquote {
+    width: fit-content;
+    min-width: 80%;
+    display: block;
+    margin: 1em auto;
+    line-height: 2;
+    border-top: var(--rosewater) solid 0.1em;
+    border-bottom: var(--rosewater) solid 0.1em;
+}
+
+article blockquote p {
+    margin-bottom: 0;
+    width: fit-content;
 }
 
 @media (min-width: 768px) {
