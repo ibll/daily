@@ -210,9 +210,9 @@
 				"title": "20 years ago today...",
 				"description": "[Firefox 1.0](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-us/firefox/releases/1.0) was released!"
 			},
-			"10": {
-				"title": "55 years ago today...",
-				"description": "[Sesame Street](https://en.wikipedia.org/wiki/Sesame_Street) debuted!"
+			"10":{
+				"title": "49 years ago today...",
+				"description": "The [Edmund Fitzgerald](https://en.wikipedia.org/wiki/SS_Edmund_Fitzgerald) sank in Lake Superior."
 			},
 			"11": {
 				"title": "106 years ago today...",
@@ -283,6 +283,12 @@
 			"4": {
 				"title": "215 years ago today...",
 				"description": "[The Society in Dedham for Apprehending Horse Thieves](https://en.wikipedia.org/wiki/The_Society_in_Dedham_for_Apprehending_Horse_Thieves) met for the first time!"
+			}
+		},
+		"11": {
+			"10": {
+				"title": "56 years ago today...",
+				"description": "[Sesame Street](https://en.wikipedia.org/wiki/Sesame_Street) debuted!"
 			}
 		}
 	}
